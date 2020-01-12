@@ -1,0 +1,123 @@
+  
+  
+  <ion-content>
+    <button class="b1" ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+    </button>
+    <!-- <div class="clear"></div> -->
+  <div class="dark">
+  <div class="konten">
+      <ion-row style="height: 80px; width: 100%;">
+          <ion-col size="2"> 
+              <img width="50px"src="../../assets/imgs/menu.png"/>
+          </ion-col>
+          <ion-col size="8">
+            <div class="judulmenu">Es Cocopresso</div>
+            <div class="harga">Rp 21.000</div>
+            <div class="deskripsi">Lorem, ipsum dolor sit amet</div>
+          </ion-col>
+          <ion-col size="2" class="like">
+              <ion-icon name="heart-empty"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row style="border-bottom: groove; margin: 10px auto;">
+            <!-- cuma buat garis -->
+        </ion-row>
+
+        <div class="judul"><strong>Additional Topping:</strong></div>
+        <ion-list lines="none">
+          <ion-item>
+                <ion-label>Cincau</ion-label>
+                +3.000
+                <ion-checkbox slot="start"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+                <ion-label>Coffee Jelly</ion-label>
+                +3.000
+                <ion-checkbox slot="start"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+                <ion-label>Extra Espresso</ion-label>
+                +5.000
+                <ion-checkbox slot="start"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+                <ion-label>Vanilla Ice Cream</ion-label>
+                +8.000
+                <ion-checkbox slot="start"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+                <ion-label>Matcha Ice Cream</ion-label>
+                +8.000
+                <ion-checkbox slot="start"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+                <ion-label>Chocolate Ice Cream</ion-label>
+                +8.000
+                <ion-checkbox slot="start"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+
+        <div class="judul"><strong>Sugar Level:</strong></div>
+        <ion-list lines="none">
+          <ion-radio-group>
+            <ion-item>
+              <ion-label>Normal</ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Half</ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Less</ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+        <div class="judul"><strong>Sugar Level:</strong></div>
+        <ion-list lines="none">
+          <ion-radio-group>
+            <ion-item>
+              <ion-label>Normal</ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Half</ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Less</ion-label>
+              <ion-radio slot="start"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+        <div class="judul"><strong>Special Instructions:</strong></div>
+            <ion-input class="instruction" placeholder="Add Instructions"></ion-input>
+
+        <div class="judul"><strong>Qty:</strong></div>
+          <ion-row style="width:110px">
+          <button class="buton2" ion-button> <ion-icon name="remove"></ion-icon></button>
+          <ion-input class="qty" type="number" value="1" min="1" max="99" maxlength="2"></ion-input>
+          <button class="buton2" ion-button> <ion-icon name="add"></ion-icon></button>
+          </ion-row>
+        </div>
+</div>
+  <div class="dark2">
+    <div class="bawah">
+      <ion-row align-items-center justify-content-center>
+        <ion-col size="6" align-self-center>
+          <div class="tes">
+            <div style="font-size: 10px; text-align: left;">Price</div>
+            <div style="font-size: 15px; text-align: left;">Rp 32.000</div>
+          </div>
+        </ion-col>
+        <ion-col size="6" align-self-center>
+            <button style="margin: auto;" class="buton" ion-button round>Pesan Sekarang</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+</ion-content>

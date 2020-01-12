@@ -9,6 +9,24 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+ @font-face{
+    font-family: 'brandon';
+    src: url('assets/fonts/brandon.otf');
+}
+* {
+    font-family: 'brandon' !important;
+}
+.popup{
+    padding: 20% 0 0 0;
+    background: rgba(0,0,0,0.7);
+  }
+
+  .popup .modal-wrapper {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
+
 /* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
 
@@ -24,3 +42,5 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+

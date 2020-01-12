@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { PopupPage } from '../popup/popup.page';
+// import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +10,16 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor( private modalCtrl: ModalController) {
+
+  }
+
+  async popup(){
+    const popup = await this.modalCtrl.create({
+      component: PopupPage,
+      cssClass: 'popup'
+    });
+    return await popup.present();
+  }
 
 }

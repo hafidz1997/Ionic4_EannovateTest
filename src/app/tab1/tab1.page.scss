@@ -1,4 +1,184 @@
-.welcome-card img {
-  max-height: 35vh;
-  overflow: hidden;
+  ion-segment{
+    width: 300px;
+    margin: auto;
+  }
+  ion-segment-button{
+    min-width: 50px;
+    min-height: 30px;
+    text-transform: none !important;
+    font-size: 13px;
+    font-weight: 600;
+    --color: grey;
+    --color-checked: #434343 ;
+    --indicator-color-checked:#434343 ;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --margin-end:0px;
+    --margin-start:0px;
+  }
+  ion-label{
+    margin: 0px;
+  }
+  ion-list{
+    background-color: white;
+  }
+
+  ion-row.judul{
+      padding: 0px auto !important;
+      margin-bottom: 0px !important;
+      margin-top: 30px !important;
+  }
+  .judul ion-col.col{
+      padding: 0px auto!important;
+      margin: 0px !important;
+  }
+  .judul1{
+    text-align: left; 
+    font-size: 16px; 
+    font-weight: 600;
+  }
+  .judul2{
+    text-align: right; 
+    font-size: 14px; 
+    color:#A9A9A9; 
+    font-weight: 600;
+  }
+
+  .like{
+    margin-top: 10px;
+  }
+
+  .label-md {
+      margin: 0px;
+      text-align: center;
+  }
+  ion-content{
+    --ion-background-color: #F9DDCE;
+  }
+  .atas{
+      padding: 10px 20px 0px 20px;
+  }
+  .nav{
+      padding: 5px;
+      font-size: 14px;
+  }
+  .foto{
+      height: 40px;
+      vertical-align: middle;
+  }
+
+  .logo{
+      display: block;
+      width: 150px;
+  }
+
+  .bawah{
+      padding-top: 10px ;
+  }
+
+  .buton{
+      background-color: #434343;
+      position: absolute;
+      z-index: 9999;
+      left: 0; 
+      right: 0; 
+      margin-left: auto; 
+      margin-right: auto; 
+      width:80%;
+      font-family: 'brandon';
+      font-weight: bold;
+      font-size: 16px;
+      color: white;
+      height: 50px;
+      border-radius: 25px;
+  }
+  button{
+    box-shadow: 0px 0px 8px 0px lightgray;
 }
+
+  .isi{
+      background-color: white;
+      margin-left: 0;
+      margin-top: 20px;
+      margin-bottom: 0px;
+      width: 100%;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+  }
+  .slider{
+      height: 220px;
+      padding: 0px !important;
+      margin-top: 30px;
+  }
+
+  .slide{
+      width: 80%;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 15px;
+      // background-image: url(../../assets/imgs/slide.png);
+      // background-position:center;
+      // background-repeat:no-repeat;
+      // background-size:cover;
+  }
+  ion-slides {
+    --bullet-background: red;
+    --bullet-background-active: #434343;
+  }
+
+
+  ion-slide.slide2{
+      width: 200px !important;
+  }
+  .populer{
+      margin-left: 20px;
+    //   height: 300px;
+  }
+
+  .slide2 img{
+    width: 180px;
+  }
+
+  .kotak{
+      width: 180px;
+      height: 270px;
+      margin: 10px auto;
+      border-radius: 15px;
+      position: static;
+  }
+
+  .label{
+    text-align: left; font-size: 15px;
+  }
+
+  ion-icon{
+      font-size: 30px;
+  }
+  .buton2{
+      background-color: #434343;
+      position: absolute;
+      z-index: 9999;
+      bottom: 0px;
+      right: 25px; 
+      width:40px;
+      font-weight: bold;
+      font-size: 15px;
+      border-radius: 10px;
+      color: white !important;
+      text-align: center;
+      padding: 2px;
+  }
+
+  .hour{
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
+      color: grey;
+  }
+
+  .jam{
+      vertical-align: middle;
+      line-height: 40px;
+      font-size: 16px !important;
+  }
+

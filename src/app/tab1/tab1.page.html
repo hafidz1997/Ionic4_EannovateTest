@@ -1,41 +1,221 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab One
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
+
+  <div class="atas">
+    <div class="nav">
+      <div>
+          <img class="foto" src="../../assets/imgs/foto.png">
+          <span style="margin-left: 8px;">Halo, <strong>Niko!</strong></span>
+          <ion-icon style="float: right;"name="ios-notifications-outline"></ion-icon>
+      </div>
+    </div>
+    <img class="logo" src="../../assets/imgs/janji.png">
+  </div>
+  
+  <div class="bawah">
+    <button class="buton" ion-button round>Pesan Sekarang!</button>
+  
+    <ion-card class="isi">
+  
+      <!-- slide atas -->
+      <ion-slides pager="true" class="slider">
+          <ion-slide *ngFor="let s of slide.data">
+              <ion-card class="slide">
+                  <img style="width: 100%; height: 100%;" src="{{s.img}}"/>
+              </ion-card>
+          </ion-slide>
+      </ion-slides>
+    
+      <!-- populer -->
+      <ion-segment [(ngModel)]="kategori">
+        <ion-segment-button value="populer">
+          <ion-label>Populer</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="untukmu">
+          <ion-label>Untukmu</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="kopi" style="min-width: 30px;">
+          <ion-label>Kopi</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="teh" style="min-width: 30px;">
+          <ion-label>Teh</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="snack" style="min-width: 30px;">
+          <ion-label>Snack</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+      <div [ngSwitch]="kategori">
+          <ion-list *ngSwitchCase="'populer'">
+              <ion-slides [options]="slidesOptions" class="populer">
+                  <ion-slide class="slide2" *ngFor="let p of product.data">
+                      <ion-card class="kotak">
+                        <img src="{{p.img}}"/>
+                        <ion-row style="padding:10px;">
+                            <ion-col size="8" class="label">
+                                <div><strong>{{p.name}}</strong></div>
+                                <div>Rp {{p.price}}</div>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-icon class="like" name="heart-empty"></ion-icon>
+                            </ion-col>
+                            <button (click)="popup()" class="buton2" ion-button> <ion-icon name="add"></ion-icon></button>
+                        </ion-row>
+                      </ion-card>
+                  </ion-slide>
+              </ion-slides>
+          </ion-list>
+          <ion-list *ngSwitchCase="'untukmu'">
+              <ion-slides [options]="slidesOptions" class="populer">
+                  <ion-slide class="slide2" *ngFor="let p of product.data">
+                      <ion-card class="kotak">
+                        <img src="{{p.img}}"/>
+                        <ion-row style="padding:10px;">
+                            <ion-col size="8" class="label">
+                                <div><strong>{{p.name}}</strong></div>
+                                <div>Rp {{p.price}}</div>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-icon class="like" name="heart-empty"></ion-icon>
+                            </ion-col>
+                            <button (click)="popup()" class="buton2" ion-button> <ion-icon name="add"></ion-icon></button>
+                        </ion-row>
+                      </ion-card>
+                  </ion-slide>
+              </ion-slides>
+          </ion-list>
+          <ion-list *ngSwitchCase="'kopi'">
+              <ion-slides [options]="slidesOptions" class="populer">
+                  <ion-slide class="slide2" *ngFor="let p of product.data">
+                      <ion-card class="kotak">
+                        <img src="{{p.img}}"/>
+                        <ion-row style="padding:10px;">
+                            <ion-col size="8" class="label">
+                                <div><strong>{{p.name}}</strong></div>
+                                <div>Rp {{p.price}}</div>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-icon class="like" name="heart-empty"></ion-icon>
+                            </ion-col>
+                            <button (click)="popup()" class="buton2" ion-button> <ion-icon name="add"></ion-icon></button>
+                        </ion-row>
+                      </ion-card>
+                  </ion-slide>
+              </ion-slides>
+          </ion-list>
+          <ion-list *ngSwitchCase="'teh'">
+              <ion-slides [options]="slidesOptions" class="populer">
+                  <ion-slide class="slide2" *ngFor="let p of product.data">
+                      <ion-card class="kotak">
+                        <img src="{{p.img}}"/>
+                        <ion-row style="padding:10px;">
+                            <ion-col size="8" class="label">
+                                <div><strong>{{p.name}}</strong></div>
+                                <div>Rp {{p.price}}</div>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-icon class="like" name="heart-empty"></ion-icon>
+                            </ion-col>
+                            <button (click)="popup()" class="buton2" ion-button> <ion-icon name="add"></ion-icon></button>
+                        </ion-row>
+                      </ion-card>
+                  </ion-slide>
+              </ion-slides>
+          </ion-list>
+          <ion-list *ngSwitchCase="'snack'">
+              <ion-slides [options]="slidesOptions" class="populer">
+                  <ion-slide class="slide2" *ngFor="let p of product.data">
+                      <ion-card class="kotak">
+                        <img src="{{p.img}}"/>
+                        <ion-row style="padding:10px;">
+                            <ion-col size="8" class="label">
+                                <div><strong>{{p.name}}</strong></div>
+                                <div>Rp {{p.price}}</div>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-icon class="like" name="heart-empty"></ion-icon>
+                            </ion-col>
+                            <button (click)="popup()" class="buton2" ion-button> <ion-icon name="add"></ion-icon></button>
+                        </ion-row>
+                      </ion-card>
+                  </ion-slide>
+              </ion-slides>
+          </ion-list>
+      </div>
+      
+      <!-- terakhir dibeli -->
+      <ion-row class="judul" style="padding:0px 30px;">
+          <ion-col size="8" class="judul1">
+              <div>Terakhir dibeli</div>
+          </ion-col>
+          <ion-col size="4" class="judul2">
+              <div>Lihat Semua</div>
+          </ion-col>
+      </ion-row>
+      <ion-slides [options]="slidesOptions" class="populer">
+          <ion-slide class="slide2" *ngFor="let l of last.data">
+              <ion-card class="kotak">
+                <img src="{{l.img}}"/>
+                <ion-row style="padding:10px;">
+                    <ion-col size="8" class="label">
+                        <div><strong>{{l.name}}</strong></div>
+                        <div>Rp {{l.price}}</div>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-icon class="like" name="heart" style="color: #434343;"></ion-icon>
+                    </ion-col>
+                    <button (click)="popup()" class="buton2" ion-button> <ion-icon name="add"></ion-icon></button>
+                </ion-row>
+              </ion-card>
+          </ion-slide>
+      </ion-slides>
+  
+      <!-- news -->
+      <ion-row class="judul" style="padding:0px 30px;">
+          <ion-col size="8" class="judul1">
+              <div>Artikel Untukmu</div>
+          </ion-col>
+          <ion-col size="4" class="judul2">
+              <div>Lihat Semua</div>
+          </ion-col>
+      </ion-row>
+      <ion-slides [options]="slidesOptions" class="populer">
+          <ion-slide class="slide2">
+              <ion-card class="kotak">
+                <img src="../../assets/imgs/news.png"/>
+                <div style="text-align: left; padding: 10px;">
+                  <div><strong>Lorem Ipsum Dolor Sit Amet, In Commune</strong></div>
+                  <div class="hour"><ion-icon class="jam" name="time"></ion-icon>
+                    1hr ago
+                  </div>
+                </div>
+              </ion-card>
+          </ion-slide>
+          <ion-slide class="slide2">
+              <ion-card class="kotak">
+                <img src="../../assets/imgs/news.png"/>
+                <div style="text-align: left; padding: 10px;">
+                  <div><strong>Lorem Ipsum Dolor Sit Amet, In Commune</strong></div>
+                  <div class="hour"><ion-icon class="jam" name="time"></ion-icon>
+                    1hr ago
+                  </div>
+                </div>
+              </ion-card>
+          </ion-slide>
+          <ion-slide class="slide2">
+              <ion-card class="kotak">
+                <img src="../../assets/imgs/news.png"/>
+                <div style="text-align: left; padding: 10px;">
+                  <div><strong>Lorem Ipsum Dolor Sit Amet, In Commune</strong></div>
+                  <div class="hour"><ion-icon class="jam" name="time"></ion-icon>
+                    1hr ago
+                  </div>
+                </div>
+              </ion-card>
+          </ion-slide>
+      </ion-slides>
+      
+  
     </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
-</ion-content>
+  </div>
+  
+  </ion-content>
+  

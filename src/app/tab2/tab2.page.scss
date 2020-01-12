@@ -1,1 +1,121 @@
+button{
+    text-transform: none !important;
+    padding: 0px !important;
+}
+.judul {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding-left:20px;
+    color:#434343;
+    font-weight: 600;
+}
 
+ion-item img{
+    width: 40px;
+    vertical-align: middle;
+}
+
+.item.item-block.item-md{
+    height: 90px !important;
+}
+
+//list menu
+.judulmenu{
+    font-weight: 600;
+    color:#434343;
+    font-size: 16px;
+}
+
+.harga{
+    font-size: 14px;
+    color:grey;
+}
+
+.deskripsi{
+    font-size: 12px;
+    color:grey;
+}
+
+.konten{
+    background-color: #F9DDCE;
+}
+.atas{
+    padding: 10px 20px 0px 20px;
+}
+.nav{
+    padding: 5px;
+    font-size: 14px;
+}
+.foto{
+    height: 40px;
+    vertical-align: middle;
+}
+
+.bawah{
+    padding-top: 10px ;
+}
+
+.buton{
+    position: absolute;
+    z-index: 9999;
+    width:35%;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 13px;
+    height: 40px;
+    border-radius: 25px;
+}
+button{
+    box-shadow: 0px 0px 8px 0px lightgray;
+}
+
+.delivery{
+    left: 40px;
+    background-color: #434343;
+    color: white;
+}
+.pickup{
+    right: 40px;
+    background-color: white;
+    color: #434343;
+}
+
+.isi{
+    background-color: white;
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 5px;
+}
+
+
+
+ion-icon{
+    font-size: 30px;
+}
+.buton2{
+    background-color: #434343;
+    width:30px;
+    height:30px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+ion-content{
+    --ion-background-color: #F9DDCE;
+}
+ion-list{
+    --ion-background-color: white !important;
+}
+ion-row{
+    width: 100%;
+    // height: 100px;
+    vertical-align: middle;
+}
